@@ -5,10 +5,15 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, RecognitionException {
-//        System.out.println("Hello world!");
         String dexPath = args[0];
-        String outPath = args[1];
+
+        boolean fix = false;
+        if(args.length >= 2){
+            if(args[1].equals("fix")){
+                fix = true;
+            }
+        }
         DexPatch dexPatch = new DexPatch();
-        dexPatch.parseDex(dexPath,outPath);
+        dexPatch.parseDex(dexPath,fix);
     }
 }
