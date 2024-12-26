@@ -1,0 +1,1 @@
+一键修复360加固脱壳后的简单dex。自动移除stub/*相关的冗余代码。自动替换native onCreate方法为简单的默认方法。可修复某些不依赖onCreatea加载组件的App。
